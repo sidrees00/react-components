@@ -1,8 +1,19 @@
 var GroceryList = () => (
 	<ul>
-		<li>Milk</li>
-		<li>Eggs</li>
+		<Milk />
+		<Eggs />
 	</ul>
-	);
+);
+
+var Milk = () => (
+	<li>Milk</li>
+);
+
+var Eggs = () => (
+	<li>Eggs</li>
+);
+
+
+
 
 ReactDOM.render(<GroceryList />, document.getElementById('app'));
