@@ -7,6 +7,8 @@ var GroceryListItem = (props) => (
 
 	);
 
+//Grocery list is rendered
+// Below, you are rendering an instance of GroceryListItem while passing the object list as a paramter. 
 var GroceryList = () => (
 	<div>
 		<h2>My Grocery List:</h2>
