@@ -1,24 +1,24 @@
-var GroceryListItem = (props) => {
-	
-	//function that will be invoked in response to event
-	var clickHandler = () => (
-		console.log('Hello World!!!')
+//------beginning of class component
+class GroceryListItem extends React.Component {
+	//constructor is expected on all ES6 classes
+	constructor(props) {
+		super(props);
+	}
+
+	// Every class component must have a 'render' method
+	render() {
+		return(
+			<li>{this.props.list}</li>
 		);
+	};
+}
+//-----end of class component
 
-	// Since you are using {} after =>, you must include an explicit return
-	// onClick = {function where you want to be directed}
-	return (<ul>
-		<li onClick={clickHandler}>{props.list[0]}</li>
-		<li>{props.list[1]}</li>
-		<li>{props.list[2]}</li>
-	</ul>);
 
-};
-
-var GroceryList = () => (
+var GroceryList = (props) => (
 	<div>
 		<h2>My Grocery List:</h2>
-		<GroceryListItem list = {['Milk', 'Eggs', 'Bread']}/>
+		<GroceryListItem list = {['Milk']}/>
 	</div>
 );
 
